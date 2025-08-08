@@ -1,0 +1,245 @@
+.slide
+    .vcenter
+        .center << .style [ bold ] << The right kind of abstraction
+    .vspace[lines=5]
+    .center << .style [ fg = $lowlight ] << GopherCon UK 2025 // John Cinnamond
+
+.slide
+    .vcenter
+        .quote [citation = "some rando on r/golang, probably" ; altColor = $lowlight]
+            Go's philosophy emphasizes avoiding unnecessary abstractions
+    .wait
+
+    .vcenter
+        .quote [citation = "some rando on r/golang, probably" ; altColor = $lowlight]
+            Go's philosophy emphasizes avoiding 
+            .style [fg=$highlight ; bold ] << unnecessary 
+            abstractions
+    .wait
+
+    .vspace [lines=5]
+    .center
+        What does 
+        .style [fg=$highlight] << unnecessary 
+        mean here?
+
+.slide
+    .vcenter
+        .quote [citation = "nobody, ever" ; altColor = #999999]
+            I'm going to use 
+            .style [fg=$highlight ; bold ] << unnecessary 
+            abstractions
+
+.slide
+    What kind of abstractions are unnecessary?
+    .vspace [lines=3]
+    .wait
+    
+
+    .alternate
+        Java Spring
+        ORMs
+
+.slide
+    What about map?
+    .home
+    .wait
+    .style[fg=$lowlight] << What about map?
+    .vspace [lines=5]
+
+    .type [delay=25ms]
+        > names := []string{}
+        > for _, u := range users {
+        >     names = append(names, u.Name)
+        > }
+        .wait
+        .nl
+        > ids := []uuid.UUID{}
+        > for _, u := range users {
+        >     ids = append(ids, u.ID)   
+        > }
+
+    .wait
+    .home 
+    .style[fg=$lowlight]
+        .moveTo[y=5; x=0] < names
+        .moveTo[y=7; x=4] < names
+        .moveTo[x=19] < names
+        .moveTo[y=10;x=0] < ids
+        .moveTo[y=12;x=4] < ids
+        .moveTo[y=12;x=17] < ids
+    .style[fg=$highlight] 
+        .moveTo[y=5; x=11] < string
+        .moveTo[y=7; x=26] < u.Name
+        .moveTo[y=10; x=9] < uuid.UUID
+        .moveTo[y=12; x=22] < u.ID
+
+.slide
+    .style[fg=$lowlight] << What about map?
+    .vspace [lines=5]
+
+    .type [delay=25ms]
+        > func extractFields[A any] (fn func(User) A, users []User) []A {
+        .wait
+        .style[fg=$highlight]
+            .moveTo [y=5; x=27] < fn func(User) A
+            .moveTo [x=60] < A
+        .nl
+        .wait
+        >     out := []A{}
+        >     for _, u := range users {
+        >         out = append(out, fn(u))
+        >     }
+        >     return out
+        > }
+        .wait
+        .style[fg=$highlight]
+            .moveTo [y=6;x=13] < A
+            .moveTo [y=8;x=26] < fn(u)
+        .wait
+        .moveTo [y=13]
+        ids := extractFields(func(u User) string { u.ID }, users)
+
+.slide
+    What kind of abstractions are unnecessary?
+    .vspace [lines=3]
+
+    .alternate
+        map
+        generics
+        interfaces?
+
+.slide
+    .vcenter
+        > func parseBody(r io.Reader) {
+        >     bytes, err := io.ReadAll(r)
+        >     // ...
+        > }
+
+.slide
+    .vcenter
+        > func parseFileBody(f os.File) {
+        >     var bytes := make([]byte, 1024)
+        >     n, err := f.Read(&b)
+        >     // ...
+        > }
+        .nl < .nl
+        > func parseBytesBody(b []byte) {
+        >     // ...
+        > }
+
+.slide
+    What kind of abstractions are unnecessary?
+    .vspace [lines=3]
+
+    .alternate
+        interfaces
+        functions?
+        assembler?
+        machine code?
+
+.slide
+    .vcenter
+        .center
+            > Programming without abstractions
+            > is just screaming electrical impluses
+            > into silicon wafers
+
+.slide
+    .vcenter
+        .center
+            This is obviously absurd
+
+.slide
+    .vcenter
+        .style[fg=$lowlight] << Go's philosophy emphasizes avoiding unnecessary abstractions
+        .vspace[lines=5]
+        unnecessary != technically possible to program without them
+
+.slide
+    .vcenter
+        Go's philosophy emphasizes avoiding unnecessary abstractions
+        .wait
+        .moveTo[x=60]
+        .backspace << unnecessary abstractions
+        .type << inappropriate abstractions
+
+.slide
+    so...
+
+    what is an 
+    .style[fg=$highlight] << inappropriate 
+    abstraction?
+
+    .wait
+    .vspace[lines=5]
+    it depends who you ask
+
+    .wait
+    .vspace[lines=5]
+    > Appropriate abstractions are ones that I write.
+    > It's other people's abstractions that are the problem.
+
+.slide
+    The 
+    .style[bold] << appropriateness 
+    of abstractions
+    .nl
+    is subjective
+
+    .wait
+    .vspace[lines=5]
+    But it's not arbitrary
+    
+    .wait
+    .vspace[lines=3]
+    It's not like asking "what is your favourite color?"
+
+.slide
+    You can look at an abstraction and say
+    .nl < .nl
+    .quote << That is a bad abstraction
+
+    .wait
+    .nl < .nl
+    > ...which is different from saying
+    .nl < .nl
+    .quote << Pink is a bad color
+
+.slide
+    > In general, there are a bunch of abstractions 
+    > that we can all agree are "bad"
+
+    .wait
+    .vspace[lines=3]
+    > ...and a bunch of abstractions
+    > that we can all agree are "good"
+
+    .wait
+    .vspace[lines=3]
+    > ...and an awkward bunch in the middle
+    > where we don't agree
+
+.slide
+    How do we decide 
+    .type 
+        .style[fg=$highlight] << appropriateness 
+    .nl
+    for these awkward abstractions?
+
+    .wait
+    .vspace[lines=5]
+    > I don't know
+    .wait
+    > (soz)
+
+.slide
+    > "good" and "bad" have meaning when talking about abstractions
+    
+    .wait
+    .vspace[lines=5]
+    > ... it's just a bit hard to explain sometimes
+
+    .wait
+    .vspace[lines=5]
+    > This talk is about learning how to articulate that meaning

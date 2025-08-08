@@ -1,0 +1,7 @@
+\fg = #ffffff
+\bg = #000000
+\highlight = #d03189
+\lowlight = #999999
+
+.margin [ left = 1/5 ; top = 1/4 ]
+.style [ fg = $fg; bg = $bg ]
