@@ -8,31 +8,230 @@
 
 
 .slide
-    .middle
-        > ready at hand
-        > vs
-        > present at hand
+    .vcenter
+        .center
+            .style[fg=$lowlight] << Part 2a
+        .nl < .nl
+        .style[bold]
+            .center << ready-to-hand
+            .nl
+            .center << vs
+            .nl
+            .center << present-at-hand
+
+
+.slide
+    .exec[cmd="timg -E -gx16 ./images/being_and_time.jpg"]
+    .vcenter
+        .moveTo[x=25]
+        > Martin Heidegger
+        .vspace[lines=2]
+        .moveTo[x=25]
+        > Sein und Zeit (Being and Time)
+        .moveTo[x=25]
+        .style[fg=$lowlight] << 1927
+
+.slide
+    .vcenter
+        We normally encounter objects as 
+        .style[fg=$highlight;bold] << ready-to-hand
+        .nl
+        
+        .wait
+        .vspace[lines=3]
+        > We consider them in terms of trying to achieve
+        > some other task
+
+        .wait
+        .vspace[lines=3]
+        We don't normally consider objects 
+        .alternate
+            independently
+            theoretically
+
+.slide
+    .center << Consider a hammer
+
+    .wait
+    .moveTo[y=3]
+    .exec[cmd="timg -E -gx11 ./images/hammer.jpg"]
+
+    .wait
+    .moveTo[y=5;x=25]
+    > We normally consider a hammer
+    .moveTo[x=25]
+    > in terms of hammering something
+
+    .wait
+    .nl
+    .moveTo[x=25]
+    > We don't think about how it 
+    .moveTo[x=25]
+    > is constructed
+
+    .wait
+    .nl
+    .moveTo[x=25]
+    > We don't think about what it
+    .moveTo[x=25]
+    .style[fg=$highlight] << means to be a hammer
+
+
+.slide
+    .center << Consider a for loop
+
+    .vspace[lines=3]
+    .style[fg=$lowlight]
+        .type
+            > for _, u := range users {
+            >     // ...   
+            > }
+
+    .wait
+    .vspace[lines=2]
+    > We normally consider it in terms of 
+    > doing something to a collection
+
+    .wait
+    .vspace[lines=2]
+    > We don't think about how it is implemented
+
+    .wait
+    .vspace[lines=2]
+    We don't think about 
+    .style[fg=$highlight] << what a for loop is
 
 .slide
     .middle
-        > "necessary" truth
+        A 
+        .style[fg=$highlight] << for loop 
+        is ready-to-hand
+
+.slide
+    .middle
+        What about generics?
+
+    .wait
+    .backspace << generics?
+    .alternate
+        the Visitor Pattern?
+        ports and adapters?
+        monads?
+
+    .wait
+    .vspace[lines=3]
+    .center << It depends how familiar we are with them
+
+.slide
+    .vcenter
+        Unfamiliar abstractions are
+        .nl
+        .style[fg=$highlight] << present-at-hand
+
+        .wait
+        .vspace[lines=3]
+        "... and "
+        .style[fg=$highlight] << present-at-hand 
+        abstractions
+        .nl
+        are bad abstractions
+
+        .wait
+        .vspace[lines=3]
+        They distract us from what we're trying to do.
+
+.slide
+    .vcenter
+        .center
+            .style[fg=$lowlight] << Part 2b
+        .nl < .nl
+        .style[bold]
+            .center << Truth and Necessity
+
+.slide
+    .exec[cmd="timg -E -gx16 ./images/kant.jpg"]
+    .vcenter
+        .moveTo[x=30]
+        > Immanuel Kant
+        .vspace[lines=2]
+        .moveTo[x=30]
+        > Critique of Pure Reason
+        .moveTo[x=30]
+        .style[fg=$lowlight] << 1781
         
-        .vspace[lines=10]
-        > Kant on analytical vs synthetic truth
-        > Putnam on necessity and essentialism
+.slide
+    .center << Anayltic vs Synthetic propositions
+
+    .wait
+    .vspace[lines=3]
+    The truth of an 
+    .style[fg=$highlight] << analytic 
+    proposition 
+    .nl
+    is derived from its content
+    .nl < .nl
+    .wait
+    .style[fg=$lowlight] << e.g.
+    .nl
+    .list[bullet=$bullet]
+        .type << triangles have three sides
+        .type << all bachelors are unmarried
+
+    .wait
+    .vspace[lines=2]
+    The truth of a 
+    .style[fg=$highlight] << synthetic 
+    proposition 
+    .nl
+    is derived from 
+    .style[fg=$highlight] << outside 
+    of its content
+    .nl < .nl
+    .wait
+    .style[fg=$lowlight] << e.g.
+    .nl
+    .list[bullet=$bullet]
+        .type << it is raining
+        .type << triangles are the best shape
+
+.slide
+    .vcenter
+        .style[fg=$highlight] << Anayltic 
+        propositions which are true
+        .nl
+        are 
+        .style[fg=$highlight] << necessarily 
+        true.
+        
+        .wait
+        .nl
+        They cannot be false.
+
+        .wait
+        .vspace[lines=3]
+        .style[fg=$highlight] << Synthetic 
+        propositions which are true
+        .nl
+        are 
+        .style[fg=$highlight] << circumstantially 
+        true.
+        
+        .wait
+        .nl
+        They can become false if circumstances change.
 
 .slide
     .middle
         > Algebra
 
-        .vspace[lines=10]
-        > Modelling the world
-        > Not a tool, but a recognition
+    .vspace[lines=2]
+    > Modelling the world
+    > Not a tool, but a recognition
 
-        > Simple algebra is ever-present in coding (in functions)
-        > Universal algebra helps us structure our code
-        > Semi-group example
-        > Monoid example
+    > Simple algebra is ever-present in coding (in functions)
+    > Universal algebra helps us structure our code
+    > Semi-group example
+    > Monoid example
 
 .slide
     .middle

@@ -6,10 +6,6 @@
 \bullet = "•"
 
 .prelude
-    .margin [ left = 1/5 ; top = 1/4 ]
+    .margin [ left = 1/6 ; top = 1/6 ]
     .style [ fg = $fg; bg = $bg ]
     .clear
-
-    .middle
-        .type << press any key to begin
-        .wait
