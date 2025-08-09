@@ -1,0 +1,39 @@
+.slide
+    .vcenter
+        .center
+            .style[fg=$lowlight] << Part 2
+        .nl < .nl
+        .center
+            .style[bold] << How to think about abstractions
+
+
+.slide
+    .middle
+        > ready at hand
+        > vs
+        > present at hand
+
+.slide
+    .middle
+        > "necessary" truth
+        
+        .vspace[lines=10]
+        > Kant on analytical vs synthetic truth
+        > Putnam on necessity and essentialism
+
+.slide
+    .middle
+        > Algebra
+
+        .vspace[lines=10]
+        > Modelling the world
+        > Not a tool, but a recognition
+
+        > Simple algebra is ever-present in coding (in functions)
+        > Universal algebra helps us structure our code
+        > Semi-group example
+        > Monoid example
+
+.slide
+    .middle
+        > Software development is a social activity

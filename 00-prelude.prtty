@@ -1,7 +1,15 @@
-\fg = #ffffff
 \bg = #000000
+\fg = #ffffff
 \highlight = #d03189
-\lowlight = #999999
+\lowlight = #aaaaaa
 
-.margin [ left = 1/5 ; top = 1/4 ]
-.style [ fg = $fg; bg = $bg ]
+\bullet = "•"
+
+.prelude
+    .margin [ left = 1/5 ; top = 1/4 ]
+    .style [ fg = $fg; bg = $bg ]
+    .clear
+
+    .middle
+        .type << press any key to begin
+        .wait

@@ -1,0 +1,34 @@
+.slide
+    .vcenter
+        .center 
+            .style[fg=$lowlight] << Part 1
+        .nl < .nl
+        .center
+            .style[bold] << What is an abstration, and why would I want one?
+
+.slide
+    .vcenter
+        > An abstraction
+        > is a representation
+        > of a concept or phenomenon
+        > that deliberately removes some detail
+        > of the thing being represented
+
+.slide
+    .vcenter
+        > An abstraction
+        > is a representation
+
+    .vspace[lines=10]
+    > talk about the difference between the thing being represented and the abstraction
+    > e.g., reader vs implementation of Read
+
+.slide
+    .vcenter
+        > that deliberately removes some detail
+        
+    .vspace[lines=10]
+    > talk about representations that try to be accurate, e.g., a model car
+    > compare with a representation that removes detail, e.g., the go gopher
+    
+

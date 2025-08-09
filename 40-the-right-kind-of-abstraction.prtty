@@ -1,0 +1,61 @@
+.slide
+    .vcenter
+        .center 
+            .style[fg=$lowlight] << Part 3
+        .nl < .nl
+        .center
+            .style[bold] << The right kind of abstraction
+
+
+.slide
+    .middle
+        > Be suspicious of abstractions
+
+.slide
+    .vcenter
+        .quote[citation="Sandi Metz"; altColor=$lowlight]
+            prefer duplication over the wrong abstraction
+
+    .moveTo [y=3; anchor=BottomRight]
+    .center 
+        .style[fg=$lowlight]
+            https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction
+
+.slide
+    .vcenter
+        What kind of abstraction is it?
+
+        .vspace[lines=3]
+        .wait
+        .list[bullet="•"]
+            Abstraction to what something is?
+            Abstraction to what something does?
+            Abstraction of how it does it?
+
+.slide
+    .style[bold] << Abstraction to what something is
+    .vspace[lines=2]
+    .style[fg=$lowlight] << e.g., an optional type
+
+    .vspace[lines=2]
+    > Think about...
+    .wait
+    .list[bullet="•"]
+        how familiar is your team with the abstraction?
+        is it a "necessary truth"?
+        does it make it "ready at hand" or "present at hand"?
+
+    .wait
+    .vspace[lines=2]
+    > Be suspicious of...
+    .wait
+    .list[bullet=$bullet]
+        doing this for reuse
+        hiding implementation details
+
+    .wait
+    .vspace[lines=2]
+    > Consider this for...
+    .wait
+    .list[bullet=$bullet]
+        matching the way you think about the world
