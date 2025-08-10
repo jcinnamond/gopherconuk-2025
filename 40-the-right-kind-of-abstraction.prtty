@@ -1,3 +1,4 @@
+.startHere
 .slide
     .vcenter
         .center 
@@ -13,6 +14,22 @@
 
 .slide
     .vcenter
+        .center << Don't introduce an abstraction
+        .nl
+        .center << just because it seems neat
+
+.slide
+    .vcenter
+        The wrong abstraction makes your code
+        .nl
+        harder to 
+        .alternate
+            understand
+            maintain
+            extend
+
+.slide
+    .vcenter
         .quote[citation="Sandi Metz"; altColor=$lowlight]
             prefer duplication over the wrong abstraction
 
@@ -22,10 +39,52 @@
             https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction
 
 .slide
-    .vcenter
-        What kind of abstraction is it?
+    .center << however
 
+    .wait
+    .vcenter
+        .center << The right abstractions supercharge
+        .nl
+        .center << our ability to write code
+
+.slide
+    .middle
+        So how do we find good abstractions?
+
+.slide
+    .vcenter
+        > I still can't give you an answer to this.
+        .wait
+        > (soz)
+
+        .wait
         .vspace[lines=3]
+        > It's always going to be subjective.
+        .wait
+        > It's always going to be contextual.
+
+        .wait
+        .vspace[lines=3]
+        > But I can tell you how to think about this...
+
+.slide
+    .vcenter
+        Start with 2 questions:
+
+        .wait
+        .vspace[lines=2]
+        > 1. What problem are you trying to solve?
+        .wait
+        .list[bullet=$bullet]
+            avoiding repetition?
+            revealing new ways to structure code?
+            defering details?
+            identifing a domain concept?
+            describing some truth about the implementation?
+
+        .wait
+        .vspace[lines=2]
+        > 2. What kind of abstraction is it?
         .wait
         .list[bullet="•"]
             Abstraction to what something is?
@@ -42,7 +101,7 @@
     .wait
     .list[bullet="•"]
         how familiar is your team with the abstraction?
-        is it a "necessary truth"?
+        is it an "essential truth"?
         does it make it "ready at hand" or "present at hand"?
 
     .wait
@@ -50,12 +109,149 @@
     > Be suspicious of...
     .wait
     .list[bullet=$bullet]
-        doing this for reuse
-        hiding implementation details
+        doing this to avoid repetition
+        hiding important implementation details
+        the abstraction becoming a distraction
 
     .wait
     .vspace[lines=2]
     > Consider this for...
     .wait
     .list[bullet=$bullet]
-        matching the way you think about the world
+        revealing a truth about your code
+        treating different things in the same way
+
+.slide
+    .style[bold] << Abstraction to what something does
+    .vspace[lines=2]
+    .style[fg=$lowlight] << e.g., a reader
+
+    .vspace[lines=2]
+    > Think about...
+    .wait
+    .list[bullet="•"]
+        how familiar is your team with the abstraction?
+        is this the only thing it does?
+        does it have to do this?
+        is it obvious that it does this?
+
+    .wait
+    .vspace[lines=2]
+    > Be suspicious of...
+    .wait
+    .list[bullet=$bullet]
+        forcing structures into shapes that don't fit
+        complicated definitions of "what it does"
+
+    .wait
+    .vspace[lines=2]
+    > Consider this for...
+    .wait
+    .list[bullet=$bullet]
+        reusing structures
+
+.slide
+    .style[bold] << Abstraction of how something works
+    .vspace[lines=2]
+    .style[fg=$lowlight] << e.g., a json encoder
+
+    .vspace[lines=2]
+    > Think about...
+    .wait
+    .list[bullet="•"]
+        could this be done in a different way?
+        can it be extended if we want to do something else?
+        would this abstraction exist even if the code looked difference?
+
+    .wait
+    .vspace[lines=2]
+    > Be suspicious of...
+    .wait
+    .list[bullet=$bullet]
+        hiding implementation details
+        inventing concepts from repeated code
+        grouping things that don't belong together
+
+    .wait
+    .vspace[lines=2]
+    > Consider this when...
+    .wait
+    .list[bullet=$bullet]
+        how it works is strictly defined
+        how it does it is what it does
+
+.slide
+    .vcenter
+        > Be scpetical about your own abilities
+
+        .wait
+        .vspace[lines=2]
+        > Good abstractions are hard to find
+        .wait
+        > It takes a lot of effort to find out if they
+        > really are "good"
+        .wait
+        > It can take a lot of effort to introduce them to a team
+        > There are a lot of bad abstractions out there
+
+        .wait
+        .vspace[lines=2]
+        > Why do you think you can do this?
+
+.slide
+    .vcenter
+        > ...but don't be put off!
+
+        .wait
+        .vspace[lines=2]
+        > The payoff from finding a good abstraction
+        > can be huge.
+
+        .wait
+        .vspace[lines=2]
+        > It just takes a lot of work.
+
+.slide
+    .middle
+        Don't be lazy
+
+.slide
+    .middle
+        Don't assume an abstraction will achieve your goals
+
+
+.slide
+    .vcenter
+        Remember...
+
+        .wait
+        > code is cheap.
+
+        .wait
+        .vspace[lines=2]
+        > Want to use an abstraction?
+        > Just try it.
+
+        .wait
+        .vspace[lines=2]
+        > but! check the results.
+
+.slide
+    .vcenter
+        .center << With time and effort you can find good abstractions.
+
+        .wait
+        .vspace[lines=3]
+        .center << And you can supercharge your programming.
+
+.slide
+    .vcenter
+        .center << Thank you!
+
+        .vspace[lines=5]
+        .style[fg=$lowlight]
+            .center << The right kind of abstraction
+            .nl
+            .center << John Cinnamond
+            .nl
+            .center << GopherCon UK 2025
