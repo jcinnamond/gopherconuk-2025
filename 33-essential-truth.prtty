@@ -4,7 +4,7 @@
             .style[fg=$lowlight] << Part 2c
         .nl < .nl
         .style[bold]
-            .center << Truth and Necessity
+            .center << Essential Truth
 
 .slide
     .exec[cmd="timg -E -gx16 ./images/kant.jpg"]
