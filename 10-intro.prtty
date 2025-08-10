@@ -243,7 +243,6 @@
         .wait
         > (soz)
 
-.startHere
 .slide
     .vcenter
         .center << .style[fg=$lowlight] << but all is not lost!
