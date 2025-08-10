@@ -41,10 +41,10 @@
         ORMs
 
 .slide
-    What about map?
+    What about map/reduce?
     .home
     .wait
-    .style[fg=$lowlight] << What about map?
+    .style[fg=$lowlight] << What about map/reduce?
     .vspace [lines=5]
 
     .type [delay=25ms]
@@ -75,15 +75,15 @@
         .moveTo[y=12; x=22] < u.ID
 
 .slide
-    .style[fg=$lowlight] << What about map?
+    .style[fg=$lowlight] << What about map/reduce?
     .vspace [lines=5]
 
     .type [delay=25ms]
-        > func extractFields[A any] (fn func(User) A, users []User) []A {
+        > func extract[A any] (fn func(User) A, users []User) []A {
         .wait
         .style[fg=$highlight]
-            .moveTo [y=5; x=27] < fn func(User) A
-            .moveTo [x=60] < A
+            .moveTo [y=5; x=21] < fn func(User) A
+            .moveTo [x=54] < A
         .nl
         .wait
         >     out := []A{}
@@ -98,14 +98,14 @@
             .moveTo [y=8;x=26] < fn(u)
         .wait
         .moveTo [y=13]
-        ids := extractFields(func(u User) string { u.ID }, users)
+        ids := extract(func(u User) string { u.ID }, users)
 
 .slide
     What kind of abstractions are unnecessary?
     .vspace [lines=3]
 
     .alternate
-        map
+        map/reduce
         generics
         interfaces?
 
@@ -186,6 +186,8 @@
     of abstractions
     .nl
     is subjective
+    .nl
+    and contextual
 
     .wait
     .vspace[lines=5]
@@ -198,13 +200,13 @@
 .slide
     You can look at an abstraction and say
     .nl < .nl
-    .quote << That is a bad abstraction
+    .quote[altColor=$lowlight] << That is a bad abstraction
 
     .wait
     .nl < .nl
-    > ...which is different from saying
+    ...which is different from saying
     .nl < .nl
-    .quote << Pink is a bad color
+    .quote[altColor=$lowlight] << Pink is a bad color
 
 .slide
     > In general, there are a bunch of abstractions 
