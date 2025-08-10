@@ -204,8 +204,8 @@
 
     .wait
     .nl < .nl
-    ...which is different from saying
-    .nl < .nl
+    > ...which is different from saying
+    .nl
     .quote[altColor=$lowlight] << Pink is a bad color
 
 .slide
