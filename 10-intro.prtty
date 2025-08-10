@@ -6,18 +6,18 @@
 
 .slide
     .vcenter
-        .quote [citation = "some rando on r/golang, probably" ; altColor = $lowlight]
-            Go's philosophy emphasizes avoiding unnecessary abstractions
+        .quote [citation = "some rando on r/golang" ; altColor = $lowlight]
+            Go's philosophy emphasizes avoiding 
+            unnecessary abstractions
     .wait
 
     .vcenter
-        .quote [citation = "some rando on r/golang, probably" ; altColor = $lowlight]
+        .quote [citation = "some rando on r/golang" ; altColor = $lowlight]
             Go's philosophy emphasizes avoiding 
-            .style [fg=$highlight ; bold ] << unnecessary 
-            abstractions
+            .style [fg=$highlight ; bold ] << "unnecessary " < .style[fg=$fg] << abstractions
     .wait
 
-    .vspace [lines=5]
+    .vspace [lines=3]
     .center
         What does 
         .style [fg=$highlight] << unnecessary 
@@ -26,26 +26,25 @@
 .slide
     .vcenter
         .quote [citation = "nobody, ever" ; altColor = #999999]
-            I'm going to use 
-            .style [fg=$highlight ; bold ] << unnecessary 
-            abstractions
+            I'm going to use unnecessary abstractions
 
 .slide
-    What kind of abstractions are unnecessary?
-    .vspace [lines=3]
-    .wait
-    
+    .vcenter
+        What kind of abstractions are unnecessary?
+        .vspace [lines=3]
+        .wait
+        
 
-    .alternate
-        Java Spring
-        ORMs
+        .alternate
+            Java Spring
+            ORMs
 
 .slide
     What about map/reduce?
     .home
     .wait
     .style[fg=$lowlight] << What about map/reduce?
-    .vspace [lines=5]
+    .vspace [lines=3]
 
     .type [delay=25ms]
         > names := []string{}
@@ -101,13 +100,14 @@
         ids := extract(func(u User) string { u.ID }, users)
 
 .slide
-    What kind of abstractions are unnecessary?
-    .vspace [lines=3]
+    .vcenter
+        What kind of abstractions are unnecessary?
+        .vspace [lines=3]
 
-    .alternate
-        map/reduce
-        generics
-        interfaces?
+        .alternate
+            map/reduce
+            generics
+            interfaces?
 
 .slide
     .vcenter
@@ -129,14 +129,15 @@
         > }
 
 .slide
-    What kind of abstractions are unnecessary?
-    .vspace [lines=3]
+    .vcenter
+        What kind of abstractions are unnecessary?
+        .vspace [lines=3]
 
-    .alternate
-        interfaces
-        functions?
-        assembler?
-        machine code?
+        .alternate
+            interfaces
+            functions?
+            assembler?
+            machine code?
 
 .slide
     .vcenter
@@ -152,96 +153,113 @@
 
 .slide
     .vcenter
-        .style[fg=$lowlight] << Go's philosophy emphasizes avoiding unnecessary abstractions
-        .vspace[lines=5]
-        unnecessary != technically possible to program without them
+        .style[fg=$lowlight] 
+            > Go's philosophy emphasizes avoiding 
+            unnecessary abstractions
+
+    .vspace[lines=3]
+    > unnecessary != technically possible to 
+    > program without them
 
 .slide
     .vcenter
-        Go's philosophy emphasizes avoiding unnecessary abstractions
+        > Go's philosophy emphasizes avoiding
+        unnecessary abstractions
         .wait
-        .moveTo[x=60]
+        .moveTo[x=24]
         .backspace << unnecessary abstractions
         .type << inappropriate abstractions
 
 .slide
-    so...
+    .vcenter
+        so...
+        .nl
+        what is an 
+        .style[fg=$highlight] << inappropriate 
+        abstraction?
 
-    what is an 
-    .style[fg=$highlight] << inappropriate 
-    abstraction?
+        .wait
+        .vspace[lines=3]
+        it depends who you ask
 
-    .wait
-    .vspace[lines=5]
-    it depends who you ask
-
-    .wait
-    .vspace[lines=5]
-    > Appropriate abstractions are ones that I write.
-    > It's other people's abstractions that are the problem.
-
-.slide
-    The 
-    .style[bold] << appropriateness 
-    of abstractions
-    .nl
-    is subjective
-    .nl
-    and contextual
-
-    .wait
-    .vspace[lines=5]
-    But it's not arbitrary
-    
-    .wait
-    .vspace[lines=3]
-    It's not like asking "what is your favourite color?"
+        .wait
+        .vspace[lines=3]
+        > Appropriate abstractions are ones that I write.
+        > It's other people's abstractions that are the problem.
 
 .slide
-    You can look at an abstraction and say
-    .nl < .nl
-    .quote[altColor=$lowlight] << That is a bad abstraction
+    .vcenter
+        The 
+        .style[bold] << appropriateness 
+        of abstractions
+        .nl
+        is subjective
+        .nl
+        and contextual
 
-    .wait
-    .nl < .nl
-    > ...which is different from saying
-    .nl
-    .quote[altColor=$lowlight] << Pink is a bad color
-
-.slide
-    > In general, there are a bunch of abstractions 
-    > that we can all agree are "bad"
-
-    .wait
-    .vspace[lines=3]
-    > ...and a bunch of abstractions
-    > that we can all agree are "good"
-
-    .wait
-    .vspace[lines=3]
-    > ...and an awkward bunch in the middle
-    > where we don't agree
+        .wait
+        .vspace[lines=3]
+        But it's not arbitrary
+        
+        .wait
+        .vspace[lines=3]
+        It's not like asking "what is your favourite color?"
 
 .slide
-    How do we decide 
-    .type 
-        .style[fg=$highlight] << appropriateness 
-    .nl
-    for these awkward abstractions?
+    .vcenter
+        .center << You can look at an abstraction and say
+        .nl
+        .quote[altColor=$lowlight] << That is a bad abstraction
 
-    .wait
-    .vspace[lines=5]
-    > I don't know
-    .wait
-    > (soz)
+        .wait
+        .vspace[lines=3]
+        .center << "...which is different from saying"
+        .nl
+        .quote[altColor=$lowlight] << Pink is a bad color
 
 .slide
-    > "good" and "bad" have meaning when talking about abstractions
-    
-    .wait
-    .vspace[lines=5]
-    > ... it's just a bit hard to explain sometimes
+    .vcenter
+        > In general, there are a bunch of abstractions 
+        > that we can all agree are "bad"
 
-    .wait
-    .vspace[lines=5]
-    > This talk is about learning how to articulate that meaning
+        .wait
+        .vspace[lines=2]
+        > ...and a bunch of abstractions
+        > that we can all agree are "good"
+
+        .wait
+        .vspace[lines=2]
+        > ...and an awkward bunch in the middle
+        > where we don't agree
+
+.slide
+    .vcenter
+        >Which of these awkward abstractions are 
+        .type << .style[fg=$highlight] << appropraite?
+
+        .wait
+        .vspace[lines=3]
+        > I can't answer that.
+        .wait
+        > (soz)
+
+.startHere
+.slide
+    .vcenter
+        .center << .style[fg=$lowlight] << but all is not lost!
+        
+        .wait
+        .vspace[lines=3]
+        .center << "\"good\" and \"bad\" have meaning"
+        .nl
+        .center << when talking about abstractions
+        
+        .wait
+        .vspace[lines=3]
+        .center << "... it's just a bit hard to explain"
+
+.slide
+    .vcenter
+        .center << This talk is about learning how
+        .nl
+        .center << to articulate that meaning
