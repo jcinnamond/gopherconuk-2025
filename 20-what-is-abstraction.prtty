@@ -10,25 +10,236 @@
     .vcenter
         > An abstraction
         > is a representation
-        > of a concept or phenomenon
+
+        .wait
+        .nl
         > that deliberately removes some detail
         > of the thing being represented
 
 .slide
     .vcenter
-        > An abstraction
-        > is a representation
+        .quote[altColor=$lowlight]
+            An abstraction is a representation
 
-    .vspace[lines=10]
-    > talk about the difference between the thing being represented and the abstraction
-    > e.g., reader vs implementation of Read
+        .wait
+        .vspace[lines=2]
+        > It's always an abstraction of...
+
+.slide
+        .vspace[lines=5]
+        .type
+            > func (f nameFilter) Check(p Product) bool {
+            >     return p.name == f.name
+            > }
+
+        .wait
+        .nl
+        .type
+            > func (f priceFilter) Check(p Product) bool {
+            >     return p.price <= f.maxPrice
+            > }
+
+        .wait
+        .nl
+        .type
+            > func (stockFilter) Check(p Product) bool {
+            >     return p.hasStock
+            > }
+
+        .wait
+        .moveTo[y=1]
+        .style[fg=$highlight]
+            .type
+                > type Filter interface {
+                >     Check(Product) bool
+                > }
 
 .slide
     .vcenter
-        > that deliberately removes some detail
+        Abstractions are usually 
+        .style[bold] << indefinite 
+        references.
         
-    .vspace[lines=10]
-    > talk about representations that try to be accurate, e.g., a model car
-    > compare with a representation that removes detail, e.g., the go gopher
-    
+        .wait
+        .nl
+        > (they can refer to many different things)
 
+        .wait
+        .vspace[lines=3]
+        Abstractions are usually 
+        .style[bold] << open 
+        references.
+
+        .wait
+        .nl
+        > (the set of things they refer to can
+        > change over time)
+
+.slide
+    .vcenter
+        .quote[altColor=$lowlight]
+            that deliberately removes some detail
+
+        .wait
+        .vspace[lines=2]
+        > There are many kinds of references that try to be
+        > as accurate as possible.
+
+        .wait
+        .vspace[lines=2]
+        > Abstractions are different.
+        .wait
+        > They only want to represent some part of the subject.
+
+.slide
+    .exec[cmd="timg -E -gx16 ./images/gopher.jpg"]
+    .moveTo[y=4;x=30]
+    > The go gopher
+    .moveTo[x=30]
+    > is a representation
+    .moveTo[x=30]
+    > that deliberately
+    .moveTo[x=30]
+    > omits details
+
+    .wait
+    .moveTo[y=10;x=30]
+    > (and lifts heavy)
+
+
+.slide
+    .vcenter
+        > An abstraction
+        > is a representation
+        > that deliberately removes some detail
+        > of the thing being represented
+
+        .wait
+        .vspace[lines=3]
+        But why would we want to do that?
+
+
+.slide
+    .vcenter
+        .list[bullet=$bullet]
+            to avoid repeated code
+            to use different structures in the same way
+            to defer (thinking about) some details
+            to represent domain concepts
+            to reveal something about the implementation
+
+.startHere
+.slide
+    .vcenter
+        > Not all abstractions are the same
+
+        .wait
+        .vspace[lines=2]
+        Some abstractions are based on 
+        .style[fg=$highlight] << how something works
+
+        .wait
+        .vspace[lines=2]
+        > You see some repeated code
+        .wait
+        .nl
+        .type
+            > if user.isAdmin {
+            >     deleteTheThing()
+            > }
+            .nl
+            > if user.isAdmin {
+            >     addPermission()
+            > }
+
+.slide
+    .vcenter
+        > Not all abstractions are the same
+
+        .vspace[lines=2]
+        Some abstractions are based on 
+        .style[fg=$highlight] << how something works
+
+        .vspace[lines=2]
+        > You create an abstraction
+        .wait
+        .nl
+        .type
+            > func AdminDoer(u User, fn func ()) {
+            >     if u.isAdmin {
+            >         fn()
+            >     }
+            > }
+
+        .wait
+        .vspace[lines=2]
+        .style[fg=$lowlight] << (I apologise for the quality of that abstraction)
+
+.slide
+    .vcenter
+        > Not all abstractions are the same
+
+        .vspace[lines=2]
+        Some abstractions are based on 
+        .style[fg=$highlight] << how something works
+
+        .vspace[lines=2]
+        Some abstractions are based on 
+        .style[fg=$highlight] << what something does
+
+        .wait
+        .vspace[lines=2]
+        .type
+            > type Reader interface {
+            >     Read(p []byte) (n int, err error)
+            > } 
+            .nl
+            > type Stringer interface {
+            >     String() string
+            > }
+
+.slide
+    .vcenter
+        > Not all abstractions are the same
+
+        .vspace[lines=2]
+        Some abstractions are based on 
+        .style[fg=$highlight] << how something works
+
+        .vspace[lines=2]
+        Some abstractions are based on 
+        .style[fg=$highlight] << what something does
+
+        .vspace[lines=2]
+        Some abstractions are based on 
+        .style[fg=$highlight] << what something is
+
+        .wait
+        .vspace[lines=2]
+        .type
+            > type User struct {
+            >     ID        uuid.UUID
+            >     Name      string
+            >     Email     string
+            >     CreatedAt time.Time
+            > } 
+
+
+.slide
+    .vcenter
+        > Not all abstractions are the same
+
+        .vspace[lines=2]
+        Some abstractions are based on 
+        .style[fg=$highlight] << how something works
+
+        .vspace[lines=2]
+        Some abstractions are based on 
+        .style[fg=$highlight] << what something does
+
+        .vspace[lines=2]
+        Some abstractions are based on 
+        .style[fg=$highlight] << what something is
+
+        .vspace[lines=2]
+        Most abstractions are some mixture of these
