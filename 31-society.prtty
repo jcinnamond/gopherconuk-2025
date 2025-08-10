@@ -1,0 +1,60 @@
+.slide
+    .vcenter
+        .center
+            .style[fg=$lowlight] << Part 2a
+        .nl < .nl
+        .style[bold]
+            .center << Software development
+            .nl
+            .center << is a social activity
+
+.slide
+    .vcenter
+        .center << Socities develop customs and lore
+
+        .wait
+        .vspace[lines=2]
+        .center << Fitting into society means
+        .nl
+        .center << adopting these customs
+
+.slide
+    .vcenter
+        .center << Over time, societies become conservative
+        .wait
+        .nl
+        .center << The customs and beliefs ossify
+
+        .wait
+        .vspace[lines=2]
+        .center << Society can be changed
+        .nl
+        .center << but it changes slowly, and reluctantly
+
+        .wait
+        .vspace[lines=2]
+        .center << You can't be a member of a society
+        .nl
+        .center << without working with its customs and beliefs
+
+.slide
+    .vcenter
+        .center << A software development team
+        .nl
+        .center << is a social group
+
+.slide
+    .vcenter
+        To introduce a new abstraction you need to think about
+        
+        .wait
+        .vspace[lines=3]
+        .list[bullet=$bullet]
+            how well does it fit with existing lore?
+            does it match the established customs and beliefs?
+            how much work is it to change the society?
+
+        .wait
+        .vspace[lines=3]
+        > Do the benefits of the new abstraction 
+        > outweight the costs of introducing it?

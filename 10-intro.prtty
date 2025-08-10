@@ -1,8 +1,8 @@
 .slide
     .vcenter
         .center << .style [ bold ] << The right kind of abstraction
-    .vspace[lines=5]
-    .center << .style [ fg = $lowlight ] << GopherCon UK 2025 // John Cinnamond
+        .vspace[lines=5]
+        .center << .style [ fg = $lowlight ] << GopherCon UK 2025 // John Cinnamond
 
 .slide
     .vcenter

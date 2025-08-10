@@ -1,0 +1,282 @@
+.slide
+    .vcenter
+        .center
+            .style[fg=$lowlight] << Part 2c
+        .nl < .nl
+        .style[bold]
+            .center << Truth and Necessity
+
+.slide
+    .exec[cmd="timg -E -gx16 ./images/kant.jpg"]
+    .vcenter
+        .moveTo[x=30]
+        > Immanuel Kant
+        .vspace[lines=2]
+        .moveTo[x=30]
+        > Critique of Pure Reason
+        .moveTo[x=30]
+        .style[fg=$lowlight] << 1781
+        
+.slide
+    .center << Anayltic vs Synthetic propositions
+
+    .wait
+    .vspace[lines=3]
+    The truth of an 
+    .style[fg=$highlight] << analytic 
+    proposition 
+    .nl
+    is derived from its content
+    .nl < .nl
+    .wait
+    .style[fg=$lowlight] << e.g.
+    .nl
+    .list[bullet=$bullet]
+        .type << triangles have three sides
+        .type << all bachelors are unmarried
+        .type << unnecessary abstractions are unnecessary
+
+.slide
+    .center << Anayltic vs Synthetic propositions
+
+    .vspace[lines=2]
+    The truth of a 
+    .style[fg=$highlight] << synthetic 
+    proposition 
+    .nl
+    is derived from 
+    .style[fg=$highlight] << outside 
+    of its content
+    .nl < .nl
+    .wait
+    .style[fg=$lowlight] << e.g.
+    .nl
+    .list[bullet=$bullet]
+        .type << it is raining
+        .type << the book is on the table
+
+.slide
+    .vcenter
+        .style[fg=$highlight] << Anayltic 
+        propositions which are true
+        .nl
+        are 
+        .style[fg=$highlight] << necessarily 
+        true.
+        
+        .wait
+        .nl
+        Learning new facts cannot make them false.
+
+        .wait
+        .vspace[lines=3]
+        .style[fg=$highlight] << Synthetic 
+        propositions which are true
+        .nl
+        are 
+        .style[fg=$highlight] << circumstantially 
+        true.
+        
+        .wait
+        .nl
+        They can become false if circumstances change.
+
+.slide
+    .moveTo[x=8;anchor=TopLeft]
+    .exec[cmd="timg -E -gx16 ./images/putnam.jpg"]
+    .vcenter
+        .moveTo[x=24]
+        > Hilary Putnam
+        .vspace[lines=2]
+        .moveTo[x=24]
+        > The Analytic and the Synthetic
+        .moveTo[x=24]
+        > Philosophical Papers, Volume 2
+        .moveTo[x=24]
+        .style[fg=$lowlight] << 1979
+
+.slide
+    .vcenter
+        .quote[citation="Putnam, The Analytic and the Synthetic"; altColor=$lowlight]
+            it is far better to proceed on the idea that
+            .nl
+            statements fall into three kinds - analytic, 
+            .nl
+            synthetic, and lots-of-other-things
+
+.slide
+    .vcenter
+        > There are propositions that are true by definition
+        (
+        .style[fg=$highlight] << necessary 
+        > truths)
+
+        .wait
+        .style[fg=$lowlight] << .type << unnecessary abstractions are unnecessary
+
+        .wait
+        .vspace[lines=2]
+        > There are propositions that are circumstantially true
+        (
+        .style[fg=$highlight] << coincidental 
+        > truths)
+        .wait
+        .style[fg=$lowlight] << .type << I am giving a talk
+
+        .wait
+        .vspace[lines=2]
+        > There are propositions that are definitely true,
+        > but not by definition
+        (
+        .style[fg=$highlight] << essential 
+        > truths)
+        .wait
+        .style[fg=$lowlight] << .type << All matter is made from atoms
+
+.slide
+    .vcenter
+        .center << Essential truths get overturned
+        .nl
+        .center << as we learn more about the world
+
+.slide
+    .middle
+        > necessary <-- --- --- --- --- --- --> coincidental
+        > truth                                        truth
+        
+        .wait
+        .vspace[lines=3]
+        > established                              new ideas
+        > theory
+        
+
+.slide
+    .vcenter
+        .center << Abstractions have a truthiness
+
+        .wait
+        .vspace[lines=3]
+        .center
+            Is an abstraction a 
+            .style[fg=$highlight] << true 
+            representation
+        .nl
+        .center
+            of an idea, or of some implementation?
+
+        .wait
+        .vspace[lines=3]
+        .center << Does an abstraction always represent
+        .nl
+        .center << every instance of an idea or implementation?
+
+.startHere
+.slide
+    .type
+        > res := []Product{}
+        > for _, p := range products {
+        >     if p.price < maxPrice {
+        >         res = append(res, p)
+        >     }
+        > }
+
+    .wait
+    .vspace[lines=3]
+    .type
+        > res := []Product{}
+        > for _, p := range products {
+        >     if p.inStock {
+        >         res = append(res, p)
+        >     }
+        > }
+
+.slide
+    .type
+        > type Filter = func(Product) bool
+
+    .wait
+    .vspace[lines=2]
+    .type
+        > func apply(products [], fs ...Filter) []products {
+        >     // apply all filters to the list of products
+        > }
+
+.slide
+    > type Filter = func(Product) bool
+
+    .wait
+    .vspace[lines=3]
+    Is this abstraction 
+    .style[fg=$highlight] << essentially 
+    true?
+
+    .wait
+    .vspace[lines=2]
+    > Does it represent all possible filters?
+
+
+    .wait
+    .vspace[lines=2]
+    That depends on 
+    .alternate
+        the way the world is
+        reality
+
+.slide
+    > type Filter = func(Product) bool
+
+    .vspace[lines=3]
+    Is this abstraction 
+    .style[fg=$highlight] << essentially 
+    true?
+
+    .vspace[lines=3]
+    .list[bullet=$bullet]
+        price < maxPrice
+        inStock
+        size == medium
+        onSale
+
+    .wait
+    .vspace[lines=2]
+    All good
+
+.slide
+    > type Filter = func(Product) bool
+
+    .vspace[lines=3]
+    Is this abstraction 
+    .style[fg=$highlight] << essentially 
+    true?
+
+    .vspace[lines=3]
+    .list[bullet=$bullet]
+        first product with this name
+
+    .wait
+    .vspace[lines=2]
+    .type << type Filter = func(Product, 
+    .alternate 
+        []Product, int) bool
+        *map[string]struct{}) bool
+
+    .wait
+    .vspace[lines=3]
+    Not good
+
+.slide
+    .vcenter
+        Good abstractions are
+        .nl
+        .style[fg=$highlight] << essentially true
+
+        .wait
+        .vspace[lines=3]
+        Questionable abstractions are
+        .nl
+        .style[fg=$highlight] << coincidentally true
+
+        .wait
+        .vspace[lines=3]
+        > Essential truths can be overturned as we learn
+        > more about reality

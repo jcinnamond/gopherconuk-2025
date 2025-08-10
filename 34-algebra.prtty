@@ -1,0 +1,13 @@
+.slide
+    .middle
+        > Algebra
+
+    .vspace[lines=2]
+    > Modelling the world
+    > Not a tool, but a recognition
+
+    > Simple algebra is ever-present in coding (in functions)
+    > Universal algebra helps us structure our code
+    > Semi-group example
+    > Monoid example
+
