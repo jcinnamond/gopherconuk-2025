@@ -128,7 +128,6 @@
             to represent domain concepts
             to reveal something about the implementation
 
-.startHere
 .slide
     .vcenter
         > Not all abstractions are the same
