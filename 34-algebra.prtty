@@ -1,13 +1,133 @@
+.startHere
 .slide
-    .middle
-        > Algebra
+    .vcenter
+        .center
+            .style[fg=$lowlight] << Part 2d
+        .nl < .nl
+        .style[bold]
+            .center << Algebra
 
-    .vspace[lines=2]
-    > Modelling the world
-    > Not a tool, but a recognition
+.slide
+    .vcenter
+        .quote[citation="Wikipedia"; altColor=$lowlight]
+            Algebra is a branch of mathematics that deals with abstract systems
 
-    > Simple algebra is ever-present in coding (in functions)
-    > Universal algebra helps us structure our code
-    > Semi-group example
-    > Monoid example
+.slide
+    .vcenter
+        > (Abstract) algebra tries to study other mathematical phenomena
+        > by representing them with simpler structures, operations, and
+        > associated laws.
 
+.slide
+    .vcenter
+        For example, a 
+        .style[bold] << monoid 
+        consists of:
+        .nl
+
+        .wait
+        .list[bullet="  "]
+            A set 𝓢
+            A binary operation 𝓢 ⨯ 𝓢 ⟶ 𝓢, denoted by *
+        
+        .wait
+        .vspace[lines=2]
+        > satisfying two axioms
+        .wait
+        .list[bullet="  "]
+            Associativity: ∀𝘢,𝘣,𝘤 ∈ 𝓢, (𝘢 * 𝘣) * 𝘤 = 𝘢 * (𝘣 * 𝘤)
+            Identity: ∃𝘦 ∈ 𝓢, ∀a ∈ 𝓢, 𝘢 * 𝘦 = 𝘦 * 𝘢 = 𝘢
+
+        .wait
+        .vspace[lines=2]
+        > Examples of monoids:
+        .list[bullet=$bullet]
+            The set of integers ℤ with multiplication
+            The set of integers ℤ with addition
+            Strings with concatination
+            Lists with concatination
+            "..."
+
+
+.slide
+    .vcenter
+        > Algebra has been very influential in computer science
+        > and, to a lesser extent, in programming.
+        .vspace[lines=2]
+
+        .wait
+        From group theory 
+        .style[fg=$lowlight] << e.g., 
+        monoids, semi-rings, lattices
+        .nl
+        .wait
+        From category theory 
+        .style[fg=$lowlight] << e.g., 
+        functors, monads, arrows
+        .nl
+        .wait
+        From type theory 
+        .style[fg=$lowlight] << e.g., 
+        dependent types
+        .nl
+
+        .wait
+        .vspace[lines=2]
+        > I don't want to talk about particular algebras.
+
+        .wait
+        .vspace[lines=2]
+        I want to talk about an aspect of how algebra 
+        .style[fg=$highlight] << works
+
+.slide
+    .vcenter
+        "... or rather, algebra doesn't "
+        .style[fg=$highlight] << work
+
+        .wait
+        .vspace[lines=2]
+        algebra 
+        .style[fg=$highlight] << is
+
+        .wait
+        .vspace[lines=3]
+        You don't 
+        .style[fg=$highlight] << use 
+        a monad.
+        .wait
+        .nl
+        Something is (or isn't) a monad based on its properties.
+
+        .wait
+        .vspace[lines=2]
+        We can 
+        .style[fg=$highlight] << recognise 
+        that something is a monad.
+
+        .wait
+        .nl
+        We can 
+        .style[fg=$highlight] << change the structure 
+        of something to make it a monad.
+
+.slide
+    .vcenter
+        A lot of abstractions are like this in programming
+
+        .wait
+        .vspace[lines=2]
+        We don't 
+        .style[fg=$highlight] << use 
+        them.
+        .nl
+
+        .wait
+        We 
+        .style[fg=$highlight] << recogise 
+        them.
+
+        .wait
+        .vspace[lines=2]
+        > Their value comes in how they reveal truths about our code
+        > ...and in how the allow us to use different structures in the same way

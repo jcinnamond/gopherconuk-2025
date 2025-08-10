@@ -170,7 +170,6 @@
         .nl
         .center << every instance of an idea or implementation?
 
-.startHere
 .slide
     .type
         > res := []Product{}
