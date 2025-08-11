@@ -12,7 +12,7 @@
 
 
 .slide
-    .exec[cmd="timg -E -gx16 ./images/being_and_time.jpg"]
+    .exec[cmd="timg -E -gx14 ./images/being_and_time.jpg"]
     .vcenter
         .moveTo[x=25]
         > Martin Heidegger
@@ -84,11 +84,11 @@
     > doing something to a collection
 
     .wait
-    .vspace[lines=2]
+    .nl
     > We don't think about how it is implemented
 
     .wait
-    .vspace[lines=2]
+    .nl
     We don't think about 
     .style[fg=$highlight] << what a for loop is
 

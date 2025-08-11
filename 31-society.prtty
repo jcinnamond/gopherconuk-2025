@@ -10,6 +10,12 @@
 
 .slide
     .vcenter
+        .center << A software development team
+        .nl
+        .center << is a social group
+
+.slide
+    .vcenter
         .center << Socities develop customs and lore
 
         .wait
@@ -39,12 +45,6 @@
 
 .slide
     .vcenter
-        .center << A software development team
-        .nl
-        .center << is a social group
-
-.slide
-    .vcenter
         To introduce a new abstraction you need to think about
         
         .wait
@@ -58,3 +58,12 @@
         .vspace[lines=3]
         > Do the benefits of the new abstraction 
         > outweight the costs of introducing it?
+
+.slide
+    .vcenter
+        > There is a social cost to introducing 
+        > a new abstraction
+
+        .wait
+        .vspace[lines=2]
+        > So make sure it's worth it

@@ -7,7 +7,7 @@
             .center << Essential Truth
 
 .slide
-    .exec[cmd="timg -E -gx16 ./images/kant.jpg"]
+    .exec[cmd="timg -E -gx14 ./images/kant.jpg"]
     .vcenter
         .moveTo[x=30]
         > Immanuel Kant
@@ -82,8 +82,19 @@
         They can become false if circumstances change.
 
 .slide
+    .vcenter
+        > There is a certain appeal to 
+        .style[fg=$highlight] << analytic 
+        truth
+
+        .vspace[lines=2]
+        > Because it is 
+        .style[fg=$highlight] << necessarily 
+        true
+
+.slide
     .moveTo[x=8;anchor=TopLeft]
-    .exec[cmd="timg -E -gx16 ./images/putnam.jpg"]
+    .exec[cmd="timg -E -gx14 ./images/putnam.jpg"]
     .vcenter
         .moveTo[x=24]
         > Hilary Putnam
@@ -99,9 +110,7 @@
     .vcenter
         .quote[citation="Putnam, The Analytic and the Synthetic"; altColor=$lowlight]
             it is far better to proceed on the idea that
-            .nl
             statements fall into three kinds - analytic, 
-            .nl
             synthetic, and lots-of-other-things
 
 .slide
@@ -141,18 +150,28 @@
 
 .slide
     .middle
-        > necessary <-- --- --- --- --- --- --> coincidental
-        > truth                                        truth
-        
+        > definitely <-- --- --- --- --- --- --- --> maybe
+        > true                                        true
+
         .wait
-        .vspace[lines=3]
-        > established                              new ideas
-        > theory
+        .vspace[lines=2]
+        > analytic                               synthetic
+
+
+        .wait
+        .vspace[lines=2]
+        > essential                           coincidental
+        > truth                                      truth
+
+        .wait
+        .vspace[lines=2]
+        >     established                    new ideas
+        >     theory
         
 
 .slide
     .vcenter
-        .center << Abstractions have a truthiness
+        .center << Abstractions have a truthfulness
 
         .wait
         .vspace[lines=3]
@@ -250,14 +269,14 @@
 
     .vspace[lines=3]
     .list[bullet=$bullet]
-        first product with this name
+        first product with any given name
 
     .wait
     .vspace[lines=2]
     .type << type Filter = func(Product, 
     .alternate 
         []Product, int) bool
-        *map[string]struct{}) bool
+        (smap[string]struct{}) bool
 
     .wait
     .vspace[lines=3]

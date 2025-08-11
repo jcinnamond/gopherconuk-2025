@@ -10,7 +10,6 @@
     .vcenter
         .quote[citation="Wikipedia"; altColor=$lowlight]
             Algebra is a branch of mathematics 
-            .nl
             that deals with abstract systems
 
 .slide
@@ -110,7 +109,9 @@
         .nl
         We can 
         .style[fg=$highlight] << change the structure 
-        of something to make it a monad.
+        of something to turn
+        .nl
+        it into a monad.
 
 .slide
     .vcenter
@@ -172,7 +173,6 @@
         .style[fg=$highlight] << recogise 
         them.
 
-        .wait
         .vspace[lines=2]
         > Their value comes in how they reveal truths
         > about our code
