@@ -6,13 +6,13 @@
 
 .slide
     .vcenter
-        .quote [citation = "some rando on r/golang" ; altColor = $lowlight]
+        .quote [citation = "someone on r/golang" ; altColor = $lowlight]
             Go's philosophy emphasizes avoiding 
             unnecessary abstractions
     .wait
 
     .vcenter
-        .quote [citation = "some rando on r/golang" ; altColor = $lowlight]
+        .quote [citation = "someone on r/golang" ; altColor = $lowlight]
             Go's philosophy emphasizes avoiding 
             .style [fg=$highlight ; bold ] << "unnecessary " < .style[fg=$fg] << abstractions
     .wait
