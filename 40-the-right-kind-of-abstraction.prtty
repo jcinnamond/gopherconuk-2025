@@ -261,8 +261,10 @@
         > Always check the results.
 
 .slide
-    .middle
-        With time and effort you can find good abstractions
+    .vcenter
+        .center << With time and effort you can find 
+        .nl
+        .center << the right kind of abstraction
 
 .slide
     .middle

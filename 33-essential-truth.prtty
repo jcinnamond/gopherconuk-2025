@@ -276,7 +276,7 @@
     .type << type Filter = func(Product, 
     .alternate 
         []Product, int) bool
-        (smap[string]struct{}) bool
+        map[string]struct{}) bool
 
     .wait
     .vspace[lines=3]
