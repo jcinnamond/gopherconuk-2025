@@ -1,8 +1,11 @@
 .slide
     .vcenter
         .center << .style [ bold ] << The right kind of abstraction
-        .vspace[lines=5]
-        .center << .style [ fg = $lowlight ] << GopherCon UK 2025 // John Cinnamond
+    .vspace[lines=4]
+    .style [ fg = $lowlight ]
+        .center << John Cinnamond
+        .nl
+        .center << GopherCon UK 2025
 
 .slide
     .vcenter
@@ -61,17 +64,17 @@
     .wait
     .home 
     .style[fg=$lowlight]
-        .moveTo[y=5; x=0] < names
-        .moveTo[y=7; x=4] < names
+        .moveTo[y=3; x=0] < names
+        .moveTo[y=5; x=4] < names
         .moveTo[x=19] < names
-        .moveTo[y=10;x=0] < ids
-        .moveTo[y=12;x=4] < ids
-        .moveTo[y=12;x=17] < ids
+        .moveTo[y=8;x=0] < ids
+        .moveTo[y=10;x=4] < ids
+        .moveTo[y=10;x=17] < ids
     .style[fg=$highlight] 
-        .moveTo[y=5; x=11] < string
-        .moveTo[y=7; x=26] < u.Name
-        .moveTo[y=10; x=9] < uuid.UUID
-        .moveTo[y=12; x=22] < u.ID
+        .moveTo[y=3; x=11] < string
+        .moveTo[y=5; x=26] < u.Name
+        .moveTo[y=8; x=9] < uuid.UUID
+        .moveTo[y=10; x=22] < u.ID
 
 .slide
     .style[fg=$lowlight] << What about map/reduce?
