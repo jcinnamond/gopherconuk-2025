@@ -14,43 +14,6 @@
 
 .slide
     .vcenter
-        > (Abstract) algebra studies other mathematical phenomena
-        > by representing them with simpler structures, 
-        > operations, and associated laws.
-
-.slide
-    .vcenter
-        For example, a 
-        .style[bold] << monoid 
-        consists of:
-        .nl
-
-        .wait
-        .list[bullet="  "]
-            A set 𝓢
-            A binary operation 𝓢 ⨯ 𝓢 ⟶ 𝓢, denoted by *
-        
-        .wait
-        .vspace[lines=2]
-        > satisfying two axioms
-        .wait
-        .list[bullet="  "]
-            Associativity: ∀𝘢,𝘣,𝘤 ∈ 𝓢, (𝘢 * 𝘣) * 𝘤 = 𝘢 * (𝘣 * 𝘤)
-            Identity: ∃𝘦 ∈ 𝓢, ∀a ∈ 𝓢, 𝘢 * 𝘦 = 𝘦 * 𝘢 = 𝘢
-
-        .wait
-        .vspace[lines=2]
-        > Examples of monoids:
-        .list[bullet=$bullet]
-            The set of integers ℤ with multiplication
-            The set of integers ℤ with addition
-            Strings with concatination
-            Lists with concatination
-            "..."
-
-
-.slide
-    .vcenter
         > Algebra has been very influential in computer science
         > and, to a lesser extent, in programming.
         .vspace[lines=2]
@@ -86,62 +49,36 @@
         .style[fg=$highlight] << work
 
         .wait
-        .vspace[lines=2]
+        .vspace[lines=1]
         algebra 
         .style[fg=$highlight] << is
 
         .wait
-        .vspace[lines=3]
+        .vspace[lines=2]
         You don't 
-        .style[fg=$highlight] << use 
-        a monad.
+        .style[fg=$highlight] << do 
+        an algebra
         .wait
-        .nl
-        Something is (or isn't) a monad based on its properties.
-
-        .wait
-        .vspace[lines=2]
-        We can 
+        .vspace[lines=1]
+        You 
         .style[fg=$highlight] << recognise 
-        that something is a monad.
+        it
 
-        .wait
-        .nl
-        We can 
-        .style[fg=$highlight] << change the structure 
-        of something to turn
-        .nl
-        it into a monad.
 
 .slide
     .vcenter
-        A lot of abstractions are like this in programming
+        .style[fg=$code]
+            .type
+                > type Filter = func(Product) bool
 
-        .wait
-        .vspace[lines=2]
-        We don't 
-        .style[fg=$highlight] << use 
-        them.
-        .nl
-
-        .wait
-        We 
-        .style[fg=$highlight] << recogise 
-        them.
-
-.slide
-    .vcenter
-        .type
-            > type Filter = func(Product) bool
-
-        .wait
-        .vspace[lines=2]
-        .type
-            > func join(f1, f2 Filter) Filter {
-            >     return func(p Product) {
-            >         return f1(p) && f2(p)
-            >     }
-            > }
+            .wait
+            .vspace[lines=2]
+            .type
+                > func join(f1, f2 Filter) Filter {
+                >     return func(p Product) {
+                >         return f1(p) && f2(p)
+                >     }
+                > }
 
         .wait
         .vspace[lines=2]
@@ -161,11 +98,76 @@
 
 .slide
     .vcenter
+        A 
+        .style[bold] << monoid 
+        consists of:
+        .nl
+
+        .style[fg=$code]
+            >   A set 𝓢
+            >   A binary operation 𝓢 ⨯ 𝓢 ⟶ 𝓢, denoted by *
+        
+        .vspace[lines=2]
+        > satisfying two axioms
+        .style[fg=$code]
+            >   Associativity: ∀𝘢,𝘣,𝘤 ∈ 𝓢, (𝘢 * 𝘣) * 𝘤 = 𝘢 * (𝘣 * 𝘤)
+            >   Identity: ∃𝘦 ∈ 𝓢, ∀a ∈ 𝓢, 𝘢 * 𝘦 = 𝘦 * 𝘢 = 𝘢
+
+.slide
+    .middle
+        .style[fg=$lowlight] << ain't nobody got time for that
+
+.slide
+    .vcenter
+        > It doesn't matter whether or not you 
+        > know what a monoid is.
+
+        .wait
+        .vspace[lines=1]
+        That doesn't change the fact that this 
+        .style[fg=$highlight] << is 
+        a monoid
+        .vspace[lines=2]
+
+        .style[fg=$code]
+            > type Filter = func(Product) bool
+            .vspace[lines=1]
+            > func join(f1, f2 Filter) Filter {
+            >     return func(p Product) {
+            >         return f1(p) && f2(p)
+            >     }
+            > }
+
+.slide
+    .vcenter
+        .quote[altColor=$lowlight] << This is a monoid
+
+        .vspace[lines=2]
+        .center
+            This isn't a 
+            .style[fg=$highlight] << judgement
+        
+        .wait
+        .vspace[lines=2]
+        .center
+            We haven't done any 
+            .style[fg=$highlight] << work 
+        .nl
+        .center
+            to make it a monoid.
+
+        .wait
+        .vspace[lines=3]
+        .center
+            It's just reality
+
+.slide
+    .vcenter
         A lot of abstractions are like this in programming
 
         .vspace[lines=2]
         We don't 
-        .style[fg=$highlight] << use 
+        .style[fg=$highlight] << create 
         them.
         .nl
 
@@ -179,6 +181,30 @@
         .wait
         > ...and in how the allow us to use different 
         > structures in the same way
+
+.slide
+    .vcenter
+        .style[fg=$lowlight] << e.g, 
+        because I know this is a monoid...
+        .vspace[lines=2]
+
+        .style[fg=$code]
+            > type Filter = func(Product) bool
+            .vspace[lines=1]
+            > func join(f1, f2 Filter) Filter {
+            >     return func(p Product) {
+            >         return f1(p) && f2(p)
+            >     }
+            > }
+
+        .wait
+        .vspace[lines=1]
+        > I know I can collapse a list of 
+        > filters into a single filter
+        .wait
+        .vspace[lines=1]
+        That's just a consequence of it 
+        .style[italic] << being a monoid
 
 .slide
     .vcenter

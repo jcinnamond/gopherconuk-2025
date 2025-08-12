@@ -2,6 +2,7 @@
 \fg = #ffffff
 \highlight = #d03189
 \lowlight = #aaaaaa
+\code = #ddddbb
 
 \bullet = "•"
 
