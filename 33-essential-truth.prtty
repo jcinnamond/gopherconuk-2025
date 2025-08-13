@@ -1,3 +1,4 @@
+.waypoint[name=part2c]
 .slide
     .vcenter
         .center
@@ -190,37 +191,42 @@
         .center << every instance of an idea or implementation?
 
 .slide
-    .type
-        > res := []Product{}
-        > for _, p := range products {
-        >     if p.price < maxPrice {
-        >         res = append(res, p)
-        >     }
-        > }
+    .style[fg=$code]
+        .type
+            > res := []Product{}
+            > for _, p := range products {
+            >     if p.price < maxPrice {
+            >         res = append(res, p)
+            >     }
+            > }
 
     .wait
     .vspace[lines=3]
-    .type
-        > res := []Product{}
-        > for _, p := range products {
-        >     if p.inStock {
-        >         res = append(res, p)
-        >     }
-        > }
+    .style[fg=$code]
+        .type
+            > res := []Product{}
+            > for _, p := range products {
+            >     if p.inStock {
+            >         res = append(res, p)
+            >     }
+            > }
 
 .slide
-    .type
-        > type Filter = func(Product) bool
+    .style[fg=$code]
+        .type
+            > type Filter = func(Product) bool
 
     .wait
     .vspace[lines=2]
-    .type
-        > func apply(products [], fs ...Filter) []products {
-        >     // apply all filters to the list of products
-        > }
+    .style[fg=$code]
+        .type
+            > func apply(products [], fs ...Filter) []products {
+            >     // apply all filters to the list of products
+            > }
 
 .slide
-    > type Filter = func(Product) bool
+    .style[fg=$code]
+        > type Filter = func(Product) bool
 
     .wait
     .vspace[lines=3]
@@ -241,7 +247,8 @@
         reality
 
 .slide
-    > type Filter = func(Product) bool
+    .style[fg=$code]
+        > type Filter = func(Product) bool
 
     .vspace[lines=3]
     Is this abstraction 
@@ -260,7 +267,8 @@
     All good
 
 .slide
-    > type Filter = func(Product) bool
+    .style[fg=$code]
+        > type Filter = func(Product) bool
 
     .vspace[lines=3]
     Is this abstraction 
@@ -273,10 +281,11 @@
 
     .wait
     .vspace[lines=2]
-    .type << type Filter = func(Product, 
-    .alternate 
-        []Product, int) bool
-        map[string]struct{}) bool
+    .style[fg=$code]
+        .type << type Filter = func(Product, 
+        .alternate 
+            []Product, int) bool
+            map[string]struct{}) bool
 
     .wait
     .vspace[lines=3]

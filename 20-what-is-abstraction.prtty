@@ -118,7 +118,7 @@
 
     .wait
     .moveTo[y=9;x=30]
-    > (and lifts heavy)
+    .style[fg=$lowlight] << (and lifts heavy)
 
 .slide
     .vcenter

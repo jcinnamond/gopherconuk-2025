@@ -202,6 +202,7 @@
         Good abstractions 
         .style[fg=$highlight] << emerge
 
+.waypoint[name="here"]
 .slide
     .vcenter
         Good abstractions
@@ -212,8 +213,9 @@
             3. are ready-to-hand 
             .style[fg=$lowlight] << (can be used without thinking about them)
             4. are essential representations
-            .style[fg=$lowlight] << (accurately represent all examples)
-            5. are a recognition of patterns that already exist
+            .style[fg=$lowlight] << (always represent all examples)
+            5. are emergent
+            .style[fg=$lowlight] << (are a recognition of patterns that already exist)
 
 .slide
     .middle
@@ -246,10 +248,12 @@
 .slide
     .vcenter
         > Finding good abstractions requires a lot of work
+        .wait
+        > but you can do it.
 
         .wait
         .vspace[lines=2]
-        > ...but don't be put off!
+        > ...and don't be put off!
 
         .wait
         .vspace[lines=2]
@@ -257,17 +261,8 @@
         > can be huge.
 
 .slide
-    .middle
-        Don't take shortcuts
-
-.slide
-    .middle
-        Don't assume it's a good abstraction
-
-
-.slide
     .vcenter
-        > But remember that code is cheap.
+        > Remember that code is cheap!
 
         .wait
         .vspace[lines=1]

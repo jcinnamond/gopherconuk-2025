@@ -50,17 +50,18 @@
     .style[fg=$lowlight] << What about map/reduce?
     .vspace [lines=3]
 
-    .type [delay=25ms]
-        > names := []string{}
-        > for _, u := range users {
-        >     names = append(names, u.Name)
-        > }
-        .wait
-        .nl
-        > ids := []uuid.UUID{}
-        > for _, u := range users {
-        >     ids = append(ids, u.ID)   
-        > }
+    .style[fg=$code]
+        .type [delay=25ms]
+            > names := []string{}
+            > for _, u := range users {
+            >     names = append(names, u.Name)
+            > }
+            .wait
+            .nl
+            > ids := []uuid.UUID{}
+            > for _, u := range users {
+            >     ids = append(ids, u.ID)   
+            > }
 
     .wait
     .home 
@@ -81,27 +82,28 @@
     .style[fg=$lowlight] << What about map/reduce?
     .vspace [lines=5]
 
-    .type [delay=25ms]
-        > func extract[A any] (fn func(User) A, users []User) []A {
-        .wait
-        .style[fg=$highlight]
-            .moveTo [y=5; x=21] < fn func(User) A
-            .moveTo [x=54] < A
-        .nl
-        .wait
-        >     out := []A{}
-        >     for _, u := range users {
-        >         out = append(out, fn(u))
-        >     }
-        >     return out
-        > }
-        .wait
-        .style[fg=$highlight]
-            .moveTo [y=6;x=13] < A
-            .moveTo [y=8;x=26] < fn(u)
-        .wait
-        .moveTo [y=13]
-        ids := extract(func(u User) string { u.ID }, users)
+    .style[fg=$code]
+        .type [delay=25ms]
+            > func extract[A any] (fn func(User) A, users []User) []A {
+            .wait
+            .style[fg=$highlight]
+                .moveTo [y=5; x=21] < fn func(User) A
+                .moveTo [x=54] < A
+            .nl
+            .wait
+            >     out := []A{}
+            >     for _, u := range users {
+            >         out = append(out, fn(u))
+            >     }
+            >     return out
+            > }
+            .wait
+            .style[fg=$highlight]
+                .moveTo [y=6;x=13] < A
+                .moveTo [y=8;x=26] < fn(u)
+            .wait
+            .moveTo [y=13]
+            ids := extract(func(u User) string { u.ID }, users)
 
 .slide
     .vcenter
@@ -115,22 +117,24 @@
 
 .slide
     .vcenter
-        > func parseBody(r io.Reader) {
-        >     bytes, err := io.ReadAll(r)
-        >     // ...
-        > }
+        .style[fg=$code]
+            > func parseBody(r io.Reader) {
+            >     bytes, err := io.ReadAll(r)
+            >     // ...
+            > }
 
 .slide
     .vcenter
-        > func parseFileBody(f os.File) {
-        >     var bytes := make([]byte, 1024)
-        >     n, err := f.Read(&b)
-        >     // ...
-        > }
-        .nl < .nl
-        > func parseBytesBody(b []byte) {
-        >     // ...
-        > }
+        .style[fg=$code]
+            > func parseFileBody(f os.File) {
+            >     var bytes := make([]byte, 1024)
+            >     n, err := f.Read(&b)
+            >     // ...
+            > }
+            .nl < .nl
+            > func parseBytesBody(b []byte) {
+            >     // ...
+            > }
 
 .slide
     .vcenter
@@ -213,11 +217,8 @@
     .vcenter
         .quote[altColor=$lowlight]
             I shall not attempt to define the kinds of material I 
-            understand to be bad abstractions, 
+            understand to be bad abstractions...
             
-            .wait
-            and perhaps I could never succeed in intelligibly doing so. 
-             
             .wait
             But I know it when I see it
 
