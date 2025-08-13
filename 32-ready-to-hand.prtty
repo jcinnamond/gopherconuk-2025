@@ -44,11 +44,11 @@
     .center << Consider a hammer
 
     .wait
-    .moveTo[y=3]
+    .moveTo[y=2]
     .exec[cmd="timg -E -gx11 ./images/hammer.jpg"]
-
+    
     .wait
-    .moveTo[y=4;x=25]
+    .moveTo[y=3;x=25]
     > We normally consider a hammer
     .moveTo[x=25]
     > in terms of hammering something
@@ -68,11 +68,46 @@
     .style[fg=$highlight] << means to be a hammer
 
 
+    .wait
+    .moveTo[y=3;x=25]
+    "                              "
+    .nl < .moveTo[x=25]
+    "                                "
+    .nl < .nl < .moveTo[x=25]
+    "                             "
+    .nl < .moveTo[x=25]
+    "                "
+    .nl < .nl < .moveTo[x=25]
+    "                             "
+    .nl < .moveTo[x=25]
+    "                    "
+
+    .moveTo[y=3;x=25]
+    > If it breaks
+    .wait
+    .moveTo[x=25]
+    > we forget about hammering.
+
+    .wait
+    .nl
+    .moveTo[x=25]
+    > We become aware of
+    .moveTo[x=25]
+    > the hammer itself.
+
+    .wait
+    .nl
+    .moveTo[x=25]
+    > The hammer becomes 
+    .moveTo[x=25]
+    .style[fg=$highlight]
+        > present-at-hand
+
 .slide
     .center << Consider a for loop
 
     .vspace[lines=3]
-    .style[fg=$lowlight]
+    .style[fg=$code]
         .type
             > for _, u := range users {
             >     // ...   
@@ -81,7 +116,7 @@
     .wait
     .vspace[lines=2]
     > We normally consider it in terms of 
-    > doing something to a collection
+    > doing something repeatedly
 
     .wait
     .nl
@@ -105,8 +140,7 @@
     .wait
     .backspace << generics?
     .alternate
-        the Visitor Pattern?
-        ports and adapters?
+        patterns?
         monads?
 
     .wait
@@ -136,3 +170,29 @@
         .wait
         .vspace[lines=3]
         They distract us from what we're trying to do.
+
+.slide
+    .vcenter
+        Unfamilar abstractions can become
+        .nl
+        .style[fg=$highlight] << familiar
+
+        .wait
+        .nl
+        through education and practice
+
+        .wait
+        .vspace[lines=3]
+        .style[fg=$highlight] << present-at-hand 
+        abstractions
+
+        .wait
+        .moveTo[x=0]
+        .style[fg=$lowlight] << present-at-hand
+        .nl
+        can become 
+        .style[fg=$highlight] << .type << ready-to-hand
+
+        .wait
+        .vspace[lines=3]
+        .style[fg=$lowlight] << (just don't forget to take your team with you)
