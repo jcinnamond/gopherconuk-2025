@@ -1,3 +1,4 @@
+.waypoint[name=intro]
 .slide
     .vcenter
         .center << .style [ bold ] << The right kind of abstraction
