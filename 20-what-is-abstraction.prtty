@@ -29,7 +29,8 @@
         .center << It's always an abstraction of...
 
 .slide
-        .vspace[lines=5]
+    .vspace[lines=5]
+    .style[fg=$code]
         .type
             > func (f nameFilter) Check(p Product) bool {
             >     return p.name == f.name
@@ -47,13 +48,13 @@
             >     return p.hasStock
             > }
 
-        .wait
-        .moveTo[y=1]
-        .style[fg=$highlight]
-            .type
-                > type Filter interface {
-                >     Check(Product) bool
-                > }
+    .wait
+    .moveTo[y=1]
+    .style[fg=$highlight]
+        .type
+            > type Filter interface {
+            >     Check(Product) bool
+            > }
 
 .slide
     .vcenter
@@ -118,7 +119,6 @@
     .moveTo[y=9;x=30]
     > (and lifts heavy)
 
-
 .slide
     .vcenter
         > An abstraction
@@ -142,6 +142,12 @@
 
 .slide
     .vcenter
+        > Ultimately, we want to use abstractions
+        > because they enable us to solve
+        > complicated problems
+
+.slide
+    .vcenter
         > Not all abstractions are the same
 
         .wait
@@ -154,14 +160,15 @@
         > You see some repeated code
         .wait
         .nl
-        .type
-            > if user.isAdmin {
-            >     deleteTheThing()
-            > }
-            .nl
-            > if user.isAdmin {
-            >     addPermission()
-            > }
+        .style[fg=$code]
+            .type
+                > if user.isAdmin {
+                >     deleteTheThing()
+                > }
+                .nl
+                > if user.isAdmin {
+                >     addPermission()
+                > }
 
 .slide
     .vcenter
@@ -175,12 +182,13 @@
         > You create an abstraction
         .wait
         .nl
-        .type
-            > func AdminDoer(u User, fn func ()) {
-            >     if u.isAdmin {
-            >         fn()
-            >     }
-            > }
+        .style[fg=$code]
+            .type
+                > func AdminDoer(u User, fn func ()) {
+                >     if u.isAdmin {
+                >         fn()
+                >     }
+                > }
 
         .wait
         .vspace[lines=2]
@@ -200,14 +208,15 @@
 
         .wait
         .vspace[lines=2]
-        .type
-            > type Reader interface {
-            >     Read(p []byte) (n int, err error)
-            > } 
-            .nl
-            > type Stringer interface {
-            >     String() string
-            > }
+        .style[fg=$code]
+            .type
+                > type Reader interface {
+                >     Read(p []byte) (n int, err error)
+                > } 
+                .nl
+                > type Stringer interface {
+                >     String() string
+                > }
 
 .slide
     .vcenter
@@ -227,13 +236,14 @@
 
         .wait
         .vspace[lines=2]
-        .type
-            > type User struct {
-            >     ID        uuid.UUID
-            >     Name      string
-            >     Email     string
-            >     CreatedAt time.Time
-            > } 
+        .style[fg=$code]
+            .type
+                > type User struct {
+                >     ID        uuid.UUID
+                >     Name      string
+                >     Email     string
+                >     CreatedAt time.Time
+                > } 
 
 
 .slide

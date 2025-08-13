@@ -210,15 +210,15 @@
 
 .slide
     .vcenter
-        .center << You can look at an abstraction and say
-        .nl
-        .quote[altColor=$lowlight] << That is a bad abstraction
-
-        .wait
-        .vspace[lines=3]
-        .center << "...which is different from saying"
-        .nl
-        .quote[altColor=$lowlight] << Pink is a bad color
+        .quote[altColor=$lowlight]
+            I shall not attempt to define the kinds of material I 
+            understand to be bad abstractions, 
+            
+            .wait
+            and perhaps I could never succeed in intelligibly doing so. 
+             
+            .wait
+            But I know it when I see it
 
 .slide
     .vcenter
@@ -244,7 +244,7 @@
         .vspace[lines=3]
         > I can't answer that.
         .wait
-        > (soz)
+        .style[fg=$lowlight] << (soz)
 
 .slide
     .vcenter
