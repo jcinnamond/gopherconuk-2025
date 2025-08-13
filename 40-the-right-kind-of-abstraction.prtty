@@ -42,6 +42,10 @@
         .nl
         .center << just because it seems neat
 
+        .wait
+        .vspace[lines=3]
+        .center << Avoid premature abstraction
+
 .slide
     .vcenter
         There are lots of bad abstractions out there
@@ -77,7 +81,7 @@
 
 .slide
     .vcenter
-        .center << So... you've found a good abstraction
+        .center << So... you think you've found a good abstraction
 
         .wait
         .vspace[lines=3]
@@ -85,7 +89,8 @@
 
 .slide
     .vcenter
-        .center << Understand the benefit
+        .style[fg=$lowlight] << 1. 
+        Understand the benefit
 
         .wait
         .vspace[lines=3]
@@ -108,7 +113,8 @@
 
 .slide
     .vcenter
-        .center << Think about the social cost
+        .style[fg=$lowlight] << 2. 
+        Think about the social cost
 
         .wait
         .vspace[lines=3]
@@ -124,15 +130,21 @@
 
 .slide
     .vcenter
-        .center << Will the abstraction be a distraction?
+        .style[fg=$lowlight] << 3. 
+        Will the abstraction be a distraction?
 
         .wait
         .vspace[lines=3]
         Is the abstraction 
         .style[fg=$highlight] << ready-to-hand
         .nl
+        .style[fg=$lowlight] << do you use it without thinking?
+        .nl
+        .nl
         Or is it 
         .style[fg=$highlight] << present-at-hand
+        .nl
+        .style[fg=$lowlight] << are you distracted by the abstraction?
 
         .wait
         .vspace[lines=3]
@@ -140,10 +152,10 @@
 
 .slide
     .vcenter
-        .center 
-            Is the abstraction 
-            .style[fg=$highlight] << essential
-            "?"
+        .style[fg=$lowlight] << 4. 
+        Is the abstraction 
+        .style[fg=$highlight] << essential
+        "?"
 
         .wait
         .vspace[lines=3]
@@ -161,33 +173,46 @@
 
         .wait
         .vspace[lines=1]
-        > Don't fight reality
+        > Learn the reality
+        > Respect the reality
 
 .slide
     .vcenter
-        .center
-            Have you 
-            .style[fg=$highlight] << recognised 
-            some fundamental pattern in the code?
+        .style[fg=$lowlight] << 5. 
+        Have you 
+        .style[fg=$highlight] << recognised 
+        some 
+        .nl
+        fundamental pattern in the code?
 
         .wait
         .vspace[lines=3]
-        Are you forcing an abstraction onto the code?
+        Are you exploiting a pattern that's really there?
 
         .wait
         .vspace[lines=3]
-        Or are you exploiting a pattern that's really there?
+        Or are you 
+        .style[fg=$lowlight] << doing work
+        .nl
+        to force an abstraction onto the code?
+
+        .wait
+        .vspace[lines=3]
+        Good abstractions 
+        .style[fg=$highlight] << emerge
 
 .slide
     .vcenter
         Good abstractions
         .nl < .nl
-        .list[bullet=$bullet]
-            have a clear benefit
-            fit well with the team culture
-            are ready-to-hand
-            are essential representations
-            are a recognition of patterns that already exist
+        .list[bullet="  "]
+            1. have a clear benefit
+            2. fit well with the team culture
+            3. are ready-to-hand 
+            .style[fg=$lowlight] << (can be used without thinking about them)
+            4. are essential representations
+            .style[fg=$lowlight] << (accurately represent all examples)
+            5. are a recognition of patterns that already exist
 
 .slide
     .middle
@@ -236,16 +261,17 @@
 
 .slide
     .middle
-        Don't assume an abstraction will achieve your goals
+        Don't assume it's a good abstraction
 
 
 .slide
     .vcenter
-        .center << So... you've found a good abstraction
+        > But remember that code is cheap.
 
         .wait
-        .vspace[lines=2]
-        > Remember that code is cheap.
+        .vspace[lines=1]
+        .style[italic]
+            think you've found a good abstraction?
 
         .wait
         .vspace[lines=1]
@@ -256,19 +282,26 @@
 
         .wait
         .vspace[lines=2]
-        > Just make sure you think about what you're doing.
+        > The important thing...
+        > is to think about what you're doing.
         .wait
-        > Always check the results.
+        > and to check in with reality.
 
 .slide
     .vcenter
-        .center << With time and effort you can find 
-        .nl
-        .center << the right kind of abstraction
+        .center << Stay skeptical and curious
 
-.slide
-    .middle
-        Without time and effort you probably won't
+        .wait
+        .vspace[lines=2]
+        .center << Spend the time and effort required 
+
+        .wait
+        .vspace[lines=3]
+        .center << Then you can find the right kind of abstraction
+
+        .wait
+        .vspace[lines=2]
+        .center << and write great code
 
 .slide
     .vcenter
