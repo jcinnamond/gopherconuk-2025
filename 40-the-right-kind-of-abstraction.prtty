@@ -202,7 +202,6 @@
         Good abstractions 
         .style[fg=$highlight] << emerge
 
-.waypoint[name="here"]
 .slide
     .vcenter
         Good abstractions
