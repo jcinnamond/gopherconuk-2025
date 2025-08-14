@@ -239,7 +239,7 @@
 .slide
     .vcenter
         >Which of these awkward abstractions are 
-        .type << .style[fg=$highlight] << appropraite?
+        .type << .style[fg=$highlight] << appropriate?
 
         .wait
         .vspace[lines=3]

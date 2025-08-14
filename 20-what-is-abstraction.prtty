@@ -91,7 +91,6 @@
         .wait
         .vspace[lines=2]
         > Abstractions are different.
-        .wait
         > They only want to represent some part of the subject.
 
 .slide
